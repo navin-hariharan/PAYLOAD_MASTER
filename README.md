@@ -19,6 +19,7 @@ Create Metasploit RATS in TERMUX without portforwarding and entering commands.
 
 apt update
 apt upgrade -y
+termux-setup-storage
 pkg install python -y
 pip install pyngrok
 git clone https://github.com/navin-hariharan/PAYLOAD_MASTER
