@@ -3,6 +3,7 @@ import os
 import random
 import time
 import Payloads.pld_types as plds
+from sys import platform
 rows, columns = os.popen('stty size', 'r').read().split()
 Colms =  int ((int (columns)-37) / 2)-2
 c = " " * Colms
@@ -43,18 +44,22 @@ def banner ():
 
 
 def Check_requirments ():
-	if os.path.exists ("/sdcard/navin_playload") == False :
-		os.system ("mkdir /sdcard/navin_playload")
-
-	if os.path.exists ('/data/data/com.termux/files/usr/bin/msfconsole') == True :
-		print ("")
+	if platform == "linux" or platform == "linux2":
+	    if os.path.exists ("navin_playload") == False :
+		    os.system ("mkdir navin_playload")
 	else:
-		print("\033[1;31mMetasploit Not Installed 😢")
-		print("\033[1;36mHit Enter To Install..")
-		os.system('read ch')
-		os.system("pkg install unstable-repo;pkg install metasploit")
-		os.system('clear')
-		banner ()
+	    if os.path.exists ("/sdcard/navin_playload") == False :
+		    os.system ("mkdir /sdcard/navin_playload")
+
+	    if os.path.exists ('/data/data/com.termux/files/usr/bin/msfconsole') == True :
+		    print ("")
+	    else:
+		    print("\033[1;31mMetasploit Not Installed 😢")
+		    print("\033[1;36mHit Enter To Install..")
+		    os.system('read ch')
+		    os.system("pkg install unstable-repo;pkg install metasploit")
+		    os.system('clear')
+		    banner ()
 def chose_opt ():
 	print ("\033[1;34mNavin_payload\033[1;31m/~"+cyan+" Choose Your Payload\n")
 	time.sleep (0.5)
@@ -85,8 +90,7 @@ def exite ():
 
 
 def main ():
-	os.system("rm -rf meterpreter_droid.rc metasploit_install.rc")
-	os.system ("termux-setup-storage")
+	os.system("rm -rf meterpreter_droid.rc metasploit_install.rc __pycache__ navin_playload/* Payloads/__pycache__;killall -2 ngrok > /dev/null")
 	banner ()
 	Check_requirments ()
 	time.sleep (1.5)
