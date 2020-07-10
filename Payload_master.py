@@ -52,8 +52,7 @@ def Check_requirments ():
 		print("\033[1;31mMetasploit Not Installed 😢")
 		print("\033[1;36mHit Enter To Install..")
 		os.system('read ch')
-		final = ("bash <(curl -s https://raw.githubusercontent.com/gushmazuko/metasploit_in_termux/master/metasploit.sh)")
-		os.system('touch metasploit_install.rc;echo "'+final+'" > metasploit_install.rc;bash metasploit_install.rc')
+		os.system("pkg install unstable-repo;pkg install metasploit")
 		os.system('clear')
 		banner ()
 def chose_opt ():
