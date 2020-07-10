@@ -67,7 +67,6 @@ def chose_opt ():
 		try:
 			raise ValueError
 		except ValueError:
-			print ("\033[1;34mNavin_payload\033[1;31m/~"+cyan+"  Plz Retry Enter number from given options."+norml)
 			time.sleep(3)
 			exit (0)
 
@@ -99,7 +98,6 @@ if __name__ == "__main__":
 	except KeyboardInterrupt:
 		exite ()
 	except ValueError:
-		print ("\033[1;34mNavin_payload\033[1;31m/~"+cyan+"  Plz Retry Enter number from given options."+norml)
 		time.sleep()
 		exit (0)
 	except EOFError:
