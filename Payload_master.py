@@ -54,6 +54,8 @@ def Check_requirments ():
 		os.system('read ch')
 		final = ("bash <(curl -s https://raw.githubusercontent.com/gushmazuko/metasploit_in_termux/master/metasploit.sh)")
 		os.system('touch metasploit_install.rc;echo "'+final+'" > metasploit_install.rc;bash metasploit_install.rc')
+		os.system('clear')
+		banner ()
 def chose_opt ():
 	print ("\033[1;34mNavin_payload\033[1;31m/~"+cyan+" Choose Your Payload\n")
 	time.sleep (0.5)
