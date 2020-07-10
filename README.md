@@ -14,15 +14,19 @@ Create Metasploit RATS in TERMUX without portforwarding and entering commands.
 - This script is only for educational purposes or to prank.
 - **I am not responsible for the misuse of PAYLOAD_MASTER.**
 
-# Installation
+<h1 align="center">INSTALLATION</h1>
+
+# Termux
 ```
 
-apt update
-apt upgrade -y
+pkg update
+pkg upgrade -y
 termux-setup-storage
 pkg install python -y
 pip install pyngrok
 git clone https://github.com/navin-hariharan/PAYLOAD_MASTER
+cd PAYLOAD_MASTER
+python3 Payload_master.py
 
 ```
 
@@ -30,6 +34,8 @@ git clone https://github.com/navin-hariharan/PAYLOAD_MASTER
 
 ```
 
+pip3 install pyngrok
+git clone https://github.com/navin-hariharan/PAYLOAD_MASTER
 cd PAYLOAD_MASTER
 python3 Payload_master.py
 
