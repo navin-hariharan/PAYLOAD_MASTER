@@ -50,5 +50,3 @@ Feel Free To Open An Issue...
                  Instagram: navin_hariharan
                  Linkedin: navin-hariharan
 ```
-**Instagram:-** <a href="https://www.instagram.com/navin_hariharan/">Check Out My Instagram Profile</a><br>
-**Linkedin:-** <a href="https://www.linkedin.com/in/navin-hariharan/">Check Out My Linkedin Profile</a>
